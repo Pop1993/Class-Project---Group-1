@@ -1,5 +1,6 @@
 package Util;
 
+import Entity.Product;
 import Entity.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -27,6 +28,8 @@ public class HibernateUtil {
             configuration.setProperties(settings);
 
             configuration.addAnnotatedClass(User.class);
+
+            configuration.addAnnotatedClass(Product.class);
 
             ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
                     .applySettings(configuration.getProperties()).build();
