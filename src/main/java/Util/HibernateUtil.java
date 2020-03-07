@@ -1,5 +1,6 @@
 package Util;
 
+import Entity.Product;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
@@ -25,6 +26,8 @@ public class HibernateUtil {
             settings.put(Environment.HBM2DDL_AUTO, "update");
             configuration.setProperties(settings);
 
+
+            configuration.addAnnotatedClass(Product.class);
 
             ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
                     .applySettings(configuration.getProperties()).build();
