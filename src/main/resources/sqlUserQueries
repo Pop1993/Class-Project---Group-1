@@ -1,0 +1,9 @@
+insert into user (username, password, user_type)
+	values ('cripop', '12345678', 'employee'),
+    ('danpin', '12345678', 'employee'),
+    ('ovidiu', '12345678', 'employee');
+
+insert into user (username, password, user_type)
+	values ('user1', '1234', 'customer'),
+    ('user2', '2345', 'customer'),
+    ('user3', '3456', 'customer');
