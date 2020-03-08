@@ -9,22 +9,20 @@ import java.util.List;
 
 public class UserService {
 
-    public static boolean doesUserExists (String username, String password){
-        String usernameFromConsole = username;
-        String passwordFromConsole = password;
+    public static boolean doesUserExists (User user){
+        String usernameFromConsole = user.getUsername();
+        String passwordFromConsole = user.getPassword();
 
         Session session = HibernateUtil.getSession();
 
-        Query<User> query = session.createQuery("select username from user where username = :username" +
-                "AND password = :passwordFromConsole");
+        Query<User> query = session.createQuery("select u from User u where username = :username " +
+                "AND password = :password");
         query.setParameter("username", usernameFromConsole);
         query.setParameter("password", passwordFromConsole);
 
         User resultedUser = query.getSingleResult();
 
-        if (resultedUser == null) {
-            return false;
-        }
-        return true;
+        return resultedUser != null;
+
     }
 }
