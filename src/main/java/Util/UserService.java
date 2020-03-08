@@ -20,9 +20,8 @@ public class UserService {
         query.setParameter("username", usernameFromConsole);
         query.setParameter("password", passwordFromConsole);
 
-        User resultedUser = query.getSingleResult();
-
-        return resultedUser != null;
-
+        return query.getResultList().size() > 0;
     }
+
+
 }
