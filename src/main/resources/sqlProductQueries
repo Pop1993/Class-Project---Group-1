@@ -1,0 +1,9 @@
+insert into product (product_name, amount, price)
+	values ('carne', 20, 20 ),
+    ('lapte', 25, 5),
+    ('oua', 50, 1),
+    ('iaurt', 25, 2),
+    ('avocado', 15, 7),
+    ('mango', 20, 8),
+    ('ciocolata', 30, 9),
+    ('cereale', 35, 5);
