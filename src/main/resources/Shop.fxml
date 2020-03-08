@@ -1,14 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="Shop"
-            prefHeight="400.0" prefWidth="600.0">
-
-</AnchorPane>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<top>
+    <Label prefHeight="63.0" prefWidth="598.0" text="Welcome, please select the products you want to buy! :)" BorderPane.alignment="CENTER">
+        <font>
+            <Font name="Webdings" size="19.0" />
+        </font>
+        <padding>
+            <Insets left="39.0" />
+        </padding>
+    </Label>
+</top>
+<left>
+    <TableView prefHeight="337.0" prefWidth="274.0" BorderPane.alignment="CENTER">
+        <columns>
+            <TableColumn prefWidth="60.0" text="Product" />
+            <TableColumn prefWidth="57.0" text="Price" />
+            <TableColumn prefWidth="59.0" text="In Stock" />
+            <TableColumn prefWidth="96.0" text="Select Quantity" />
+        </columns>
+    </TableView>
+</left>
+<right>
+    <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="57.0" text="Buy" BorderPane.alignment="CENTER">
+        <BorderPane.margin>
+            <Insets right="20.0" />
+        </BorderPane.margin>
+    </Button>
+</right>
+<padding>
+    <Insets bottom="30.0" right="20.0" />
+</padding>
+<center>
+    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+        <image>
+            <Image url="@20970040.jpg" />
+        </image>
+    </ImageView>
+</center>
+</BorderPane>
