@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="104.0" prefWidth="528.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="104.0" prefWidth="528.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <top>
       <HBox prefHeight="39.0" prefWidth="530.0" BorderPane.alignment="CENTER">
          <children>
@@ -22,12 +22,12 @@
    <center>
       <HBox prefHeight="149.0" prefWidth="530.0" BorderPane.alignment="CENTER">
          <children>
-            <TextField promptText="Username">
+            <TextField fx:id="username" promptText="Username">
                <HBox.margin>
                   <Insets left="10.0" />
                </HBox.margin></TextField>
-            <PasswordField promptText="Password" />
-            <Button mnemonicParsing="false" prefHeight="29.0" prefWidth="80.0" text="Log In" textOverrun="CLIP">
+            <PasswordField fx:id="password" promptText="Password" />
+            <Button mnemonicParsing="false" onAction="#loginButtonIsClicked" prefHeight="29.0" prefWidth="80.0" text="Log In" textOverrun="CLIP">
                <font>
                   <Font name="Symbol" size="13.0" />
                </font>

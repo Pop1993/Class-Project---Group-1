@@ -23,11 +23,11 @@ public class Main extends Application {
     public static void main(String[] args) {
         launch(args);
 
-        SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
-        Session session = sessionFactory.openSession();
-        session.beginTransaction();
-
-        session.getTransaction().commit();
-        session.close();
+//        SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+//        Session session = sessionFactory.openSession();
+//        session.beginTransaction();
+//
+//        session.getTransaction().commit();
+//        session.close();
     }
 }
