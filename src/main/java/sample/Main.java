@@ -6,7 +6,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import org.hibernate.Hibernate;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
@@ -14,9 +13,9 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("/sample.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/LogInPage.fxml"));
         primaryStage.setTitle("Buna ziua");
-        primaryStage.setScene(new Scene(root, 500, 100));
+        primaryStage.setScene(new Scene(root, 500, 150));
         primaryStage.show();
     }
 
