@@ -8,9 +8,11 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+            prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1">
    <top>
       <Label prefHeight="79.0" prefWidth="600.0" text="Welcome! Please select the products that you want to buy! :)" textAlignment="CENTER" BorderPane.alignment="CENTER">
          <font>
@@ -32,20 +34,30 @@
       </TableView>
    </left>
    <center>
-      <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
-         <image>
-            <Image url="@../../../../../SmartSelect_20200308-132835_Samsung%20Internet.jpg" />
-         </image>
-         <BorderPane.margin>
-            <Insets />
-         </BorderPane.margin>
+      <ImageView fitHeight="210.0" fitWidth="253.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+            <Image url="@SmartSelect_20200308-132835_Samsung Internet.jpg" />
       </ImageView>
    </center>
    <right>
-      <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="63.0" text="Button" BorderPane.alignment="CENTER">
+      <VBox prefHeight="277.0" prefWidth="104.0" BorderPane.alignment="CENTER">
+            <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="65.0" text="Add">
+               <VBox.margin>
+                  <Insets bottom="30.0" left="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="65.0" text="Remove">
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="65.0" text="Buy">
+               <VBox.margin>
+                  <Insets left="10.0" top="30.0" />
+               </VBox.margin>
+            </Button>
          <BorderPane.margin>
-            <Insets right="25.0" />
+            <Insets top="80.0" />
          </BorderPane.margin>
-      </Button>
+      </VBox>
    </right>
 </BorderPane>

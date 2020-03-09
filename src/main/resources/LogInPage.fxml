@@ -12,16 +12,14 @@
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="104.0" prefWidth="528.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <top>
       <HBox prefHeight="39.0" prefWidth="530.0" BorderPane.alignment="CENTER">
-         <children>
-            <Label prefHeight="46.0" prefWidth="533.0" text="Va rugam sa introduceti datele de logare:">
+            <Label prefHeight="46.0" prefWidth="533.0" text="Please enter your login data:">
                <HBox.margin>
                   <Insets left="10.0" />
                </HBox.margin></Label>
-         </children></HBox>
+         </HBox>
    </top>
    <center>
       <HBox prefHeight="149.0" prefWidth="530.0" BorderPane.alignment="CENTER">
-         <children>
             <TextField fx:id="username" promptText="Username">
                <HBox.margin>
                   <Insets left="10.0" />
@@ -32,7 +30,6 @@
                   <Font name="Symbol" size="13.0" />
                </font>
             </Button>
-         </children>
       </HBox>
    </center>
    <bottom>
