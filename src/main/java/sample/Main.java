@@ -15,7 +15,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("/LogInPage2.fxml"));
         primaryStage.setTitle("D.O.C. Online Shop");
-        primaryStage.setScene(new Scene(root, 500, 150));
+        primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }
 
