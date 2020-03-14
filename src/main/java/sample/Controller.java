@@ -22,10 +22,10 @@ public class Controller {
     private PasswordField password;
 
     public void loginButtonIsClicked (ActionEvent event) throws IOException {
-        String usernameFromConsole = username.getText();
-        String passwordFromConsole = password.getText();
+        String usernameTypedByUser = username.getText();
+        String passwordTypedByUser = password.getText();
 
-        User userFromDatabase = UserService.returnUserFromDatabase(new User(usernameFromConsole, passwordFromConsole));
+        User userFromDatabase = UserService.returnUserFromDatabase(new User(usernameTypedByUser, passwordTypedByUser));
 
         if(UserService.doesUserExists(userFromDatabase)){
 
