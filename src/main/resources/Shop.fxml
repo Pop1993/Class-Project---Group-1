@@ -24,7 +24,7 @@
 <left>
     <TableView prefHeight="337.0" prefWidth="274.0" BorderPane.alignment="CENTER">
         <columns>
-            <TableColumn prefWidth="60.0" style="-fx-background-color: #cd950c;" text="Product" />
+            <TableColumn prefWidth="60.0" style="-fx-background-color: #8a2be2;" text="Product" />
             <TableColumn prefWidth="57.0" style="-fx-background-color: #66cd00;" text="Price" />
             <TableColumn prefWidth="59.0" style="-fx-background-color: #6495ed;" text="In Stock" />
             <TableColumn prefWidth="96.0" style="-fx-background-color: #7fffd4;" text="Select Quantity" />
