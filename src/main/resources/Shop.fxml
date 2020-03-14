@@ -12,7 +12,7 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
 <top>
-    <Label prefHeight="63.0" prefWidth="598.0" text="Welcome, please select the products you want to buy! :)" BorderPane.alignment="CENTER">
+    <Label prefHeight="63.0" prefWidth="598.0" style="-fx-background-color: #ffd700;" text="Welcome, please select the products you want to buy! :)" BorderPane.alignment="CENTER">
         <font>
             <Font name="Webdings" size="19.0" />
         </font>
@@ -24,15 +24,15 @@
 <left>
     <TableView prefHeight="337.0" prefWidth="274.0" BorderPane.alignment="CENTER">
         <columns>
-            <TableColumn prefWidth="60.0" text="Product" />
-            <TableColumn prefWidth="57.0" text="Price" />
-            <TableColumn prefWidth="59.0" text="In Stock" />
-            <TableColumn prefWidth="96.0" text="Select Quantity" />
+            <TableColumn prefWidth="60.0" style="-fx-background-color: #cd950c;" text="Product" />
+            <TableColumn prefWidth="57.0" style="-fx-background-color: #66cd00;" text="Price" />
+            <TableColumn prefWidth="59.0" style="-fx-background-color: #6495ed;" text="In Stock" />
+            <TableColumn prefWidth="96.0" style="-fx-background-color: #7fffd4;" text="Select Quantity" />
         </columns>
     </TableView>
 </left>
 <right>
-    <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="57.0" text="Buy" BorderPane.alignment="CENTER">
+    <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="57.0" style="-fx-background-color: #00b2ee;" text="Buy" BorderPane.alignment="CENTER">
         <BorderPane.margin>
             <Insets right="20.0" />
         </BorderPane.margin>
