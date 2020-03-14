@@ -23,5 +23,23 @@ public class UserService {
         return query.getResultList().size() > 0;
     }
 
+    public static User returnUserFromDatabase (User user){
+        String usernameFromConsole = user.getUsername();
+        String passwordFromConsole = user.getPassword();
+
+        Session session = HibernateUtil.getSession();
+
+        Query<User> query = session.createQuery("select u from User u where username = :username " +
+                "AND password = :password");
+        query.setParameter("username", usernameFromConsole);
+        query.setParameter("password", passwordFromConsole);
+
+        if (query.getResultList().size() > 0) {
+            return  query.getSingleResult();
+        } else {
+            return null;
+        }
+    }
+
 
 }

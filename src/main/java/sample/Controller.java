@@ -25,9 +25,27 @@ public class Controller {
         String usernameFromConsole = username.getText();
         String passwordFromConsole = password.getText();
 
-        User user = new User(usernameFromConsole, passwordFromConsole);
+        User userFromDatabase = UserService.returnUserFromDatabase(new User(usernameFromConsole, passwordFromConsole));
 
-        if(UserService.doesUserExists(user)){
+        if(UserService.doesUserExists(userFromDatabase)){
+
+            if ("customer".equals(userFromDatabase.getUserType())) {
+                Parent parent = FXMLLoader.load(getClass().getClassLoader().getResource("shop.fxml"));
+                Scene scene = new Scene(parent);
+                Stage appStage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+                appStage.setScene(scene);
+                appStage.show();
+            } else if ("employee".equals(userFromDatabase.getUserType())) {
+                Parent parent = FXMLLoader.load(getClass().getClassLoader().getResource("employee.fxml"));
+                Scene scene = new Scene(parent);
+                Stage appStage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+                appStage.setScene(scene);
+                appStage.show();
+            }
+
+//            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+//            alert.setContentText("You have logged in succesfully");
+//            alert.show();
 
             //the below will open the shop window, but we need to chose what type of window to open
             //depending on the type of user
