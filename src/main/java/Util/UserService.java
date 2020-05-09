@@ -15,8 +15,7 @@ public class UserService {
 
         Session session = HibernateUtil.getSession();
 
-        Query<User> query = session.createQuery("select u from User u where username = :username " +
-                "AND password = :password");
+        Query<User> query = session.createQuery("select u from User u where username = :username " + "AND password = :password");
         query.setParameter("username", usernameFromConsole);
         query.setParameter("password", passwordFromConsole);
 
