@@ -1,6 +1,7 @@
 package Entity;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 
@@ -14,11 +15,14 @@ public class Product {
     @Column(name="product_name", unique = true, nullable = false, length = 30)
     private String productName;
 
-    @Column
+    @Column(nullable = false)
     private int amount;
 
     @Column
     private int price;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "product")
+    private List<OrderProduct> orderProducts;
 
 
     public int getId() {

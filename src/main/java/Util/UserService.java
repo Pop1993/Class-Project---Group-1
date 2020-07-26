@@ -9,9 +9,9 @@ import java.util.List;
 
 public class UserService {
 
-    public static boolean doesUserExists (User user){
-        String usernameFromConsole = user.getUsername();
-        String passwordFromConsole = user.getPassword();
+    public static boolean doesUserExists (String username, String password){
+        String usernameFromConsole = username;
+        String passwordFromConsole = password;
 
         Session session = HibernateUtil.getSession();
 

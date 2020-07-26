@@ -1,5 +1,7 @@
 package sample;
 
+import Entity.Order;
+import Entity.OrderProduct;
 import Util.HibernateUtil;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -22,9 +24,15 @@ public class Main extends Application {
     public static void main(String[] args) {
         launch(args);
 
+//        Order order = new Order();
+//        OrderProduct orderProduct = new OrderProduct();
+//
 //        SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
 //        Session session = sessionFactory.openSession();
 //        session.beginTransaction();
+//
+//        session.save(order);
+//        session.save(orderProduct);
 //
 //        session.getTransaction().commit();
 //        session.close();

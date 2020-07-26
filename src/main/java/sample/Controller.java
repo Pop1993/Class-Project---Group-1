@@ -25,9 +25,10 @@ public class Controller {
         String usernameTypedByUser = username.getText();
         String passwordTypedByUser = password.getText();
 
-        User userFromDatabase = UserService.returnUserFromDatabase(new User(usernameTypedByUser, passwordTypedByUser));
 
-        if(UserService.doesUserExists(userFromDatabase)){
+        if(UserService.doesUserExists(usernameTypedByUser, passwordTypedByUser)){
+
+            User userFromDatabase = UserService.returnUserFromDatabase(new User(usernameTypedByUser, passwordTypedByUser));
 
             if ("customer".equals(userFromDatabase.getUserType())) {
                 Parent parent = FXMLLoader.load(getClass().getClassLoader().getResource("shop.fxml"));
@@ -47,18 +48,10 @@ public class Controller {
 //            alert.setContentText("You have logged in succesfully");
 //            alert.show();
 
-            //the below will open the shop window, but we need to chose what type of window to open
-            //depending on the type of user
-//            Parent parent = FXMLLoader.load(getClass().getClassLoader().getResource("shop.fxml"));
-//            Scene scene = new Scene(parent);
-//            Stage appStage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-//            appStage.setScene(scene);
-//            appStage.show();
 
-            //scene 2
         } else {
             Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setContentText("You have failed!!!!");
+            alert.setContentText("Incorrect username or password. Please try again!");
             alert.show();
         }
 
