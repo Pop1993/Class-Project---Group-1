@@ -51,7 +51,7 @@ public class Controller {
 
         } else {
             Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setContentText("You have failed!!!!");
+            alert.setContentText("Incorrect username or password. Please try again!");
             alert.show();
         }
 

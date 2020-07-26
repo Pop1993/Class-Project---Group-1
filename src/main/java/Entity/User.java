@@ -1,6 +1,7 @@
 package Entity;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class User {
@@ -15,8 +16,12 @@ public class User {
     @Column(name = "password", nullable = false, length = 20)
     private String password;
 
-    @Column(name = "user_type")
+    @Column(name = "user_type", nullable = false)
     private String userType;
+
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+    private List<Order> orderList;
 
     public User () {}
 
